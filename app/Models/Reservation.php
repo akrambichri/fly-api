@@ -18,7 +18,9 @@ class Reservation extends Model
     protected $fillable = [
         'date_debut',
         'date_retour',
-        'is_enabled'
+        'is_enabled',
+        'trottinete_id',
+        'client_id'
     ];
 
     public function transactions(): HasMany

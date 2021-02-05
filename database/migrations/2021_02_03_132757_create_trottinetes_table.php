@@ -15,7 +15,8 @@ class CreateTrottinetesTable extends Migration
     {
         Schema::create('trottinetes', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('price_per_minute');
+            $table->float('price_per_minute');
+            $table->string('uuid')->unique();
             $table->foreignId('address_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });

@@ -17,6 +17,8 @@ class Trottinete extends Model
      */
     protected $fillable = [
         'price_per_minute',
+        'uuid',
+        'address_id'
     ];
 
     public function clients(): BelongsToMany

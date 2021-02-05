@@ -42,13 +42,11 @@ class ReservationController extends ApiController
     {
         //
         $request->validate([
-            'rue' => 'required|string',
-            'ville' => 'required|string',
-            'region' => 'required|string',
-            'code_postal' => 'required|number',
-            'pays' => 'required|string',
-            'photo' => 'required|string',
-            'is_green' => 'required|boolean'
+            'date_retour' => 'required|string',
+            'is_enabled' => 'required|string',
+            'date_debut' => 'required|string',
+            'trottinete_id' => 'required|number',
+            'client_id' => 'required|string'
         ]);
 
         $reservation = Reservation::create($request->all());
@@ -92,13 +90,11 @@ class ReservationController extends ApiController
     {
         //
         $request->validate([
-            'rue' => 'required|string',
-            'ville' => 'required|string',
-            'region' => 'required|string',
-            'code_postal' => 'required|number',
-            'pays' => 'required|string',
-            'photo' => 'required|string',
-            'is_green' => 'required|boolean'
+            'date_retour' => 'string',
+            'is_enabled' => 'string',
+            'date_debut' => 'string',
+            'trottinete_id' => 'number',
+            'client_id' => 'string'
         ]);
         $reservation->update($request->all());
 

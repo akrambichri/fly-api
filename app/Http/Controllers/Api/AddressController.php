@@ -42,11 +42,7 @@ class AddressController extends ApiController
     {
         //
         $request->validate([
-            'rue' => 'required|string',
-            'ville' => 'required|string',
-            'region' => 'required|string',
-            'code_postal' => 'required|number',
-            'pays' => 'required|string',
+            'description' => 'required|string',
             'photo' => 'required|string',
             'is_green' => 'required|boolean'
         ]);
@@ -92,13 +88,9 @@ class AddressController extends ApiController
     {
         //
         $request->validate([
-            'rue' => 'required|string',
-            'ville' => 'required|string',
-            'region' => 'required|string',
-            'code_postal' => 'required|number',
-            'pays' => 'required|string',
-            'photo' => 'required|string',
-            'is_green' => 'required|boolean'
+            'description' => 'string',
+            'photo' => 'string',
+            'is_green' => 'boolean'
         ]);
         $address->update($request->all());
 

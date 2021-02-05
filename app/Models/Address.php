@@ -16,11 +16,7 @@ class Address extends Model
      * @var array
      */
     protected $fillable = [
-        'rue',
-        'ville',
-        'region',
-        'code_postal',
-        'pays',
+        'description',
         'photo',
         'is_green'
     ];

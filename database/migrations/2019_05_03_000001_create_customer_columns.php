@@ -17,6 +17,7 @@ class CreateCustomerColumns extends Migration
             $table->string('stripe_id')->nullable()->index();
             $table->string('card_brand')->nullable();
             $table->string('card_last_four', 4)->nullable();
+            $table->string('card_token')->nullable();
             $table->timestamp('trial_ends_at')->nullable();
         });
     }

@@ -42,13 +42,8 @@ class PlanController extends ApiController
     {
         //
         $request->validate([
-            'rue' => 'required|string',
-            'ville' => 'required|string',
-            'region' => 'required|string',
-            'code_postal' => 'required|number',
-            'pays' => 'required|string',
-            'photo' => 'required|string',
-            'is_green' => 'required|boolean'
+            'remise' => 'required|string',
+            'date_fin' => 'required|string'
         ]);
 
         $plan = Plan::create($request->all());
@@ -92,13 +87,8 @@ class PlanController extends ApiController
     {
         //
         $request->validate([
-            'rue' => 'required|string',
-            'ville' => 'required|string',
-            'region' => 'required|string',
-            'code_postal' => 'required|number',
-            'pays' => 'required|string',
-            'photo' => 'required|string',
-            'is_green' => 'required|boolean'
+            'remise' => 'string',
+            'date_fin' => 'string'
         ]);
         $plan->update($request->all());
 

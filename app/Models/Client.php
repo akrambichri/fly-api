@@ -12,6 +12,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Laravel\Cashier\Billable;
+use Illuminate\Support\Str;
 
 class Client extends Authenticatable implements JWTSubject
 {
@@ -26,6 +27,7 @@ class Client extends Authenticatable implements JWTSubject
         'email',
         'mobile',
         'password',
+        'card_token'
     ];
 
     /**

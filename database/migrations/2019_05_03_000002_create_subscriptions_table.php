@@ -15,7 +15,7 @@ class CreateSubscriptionsTable extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('stripe_id');
             $table->string('stripe_status');
@@ -25,7 +25,7 @@ class CreateSubscriptionsTable extends Migration
             $table->timestamp('ends_at')->nullable();
             $table->timestamps();
 
-            $table->index(['client_id', 'stripe_status']);
+            $table->index(['user_id', 'stripe_status']);
         });
     }
 

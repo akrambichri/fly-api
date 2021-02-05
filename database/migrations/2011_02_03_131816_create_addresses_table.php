@@ -15,12 +15,8 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->string('rue');
-            $table->string('ville');
-            $table->string('region');
-            $table->string('pays');
+            $table->string('description');
             $table->string('photo');
-            $table->integer('code_postal');
             $table->boolean('is_green')->default(false);
             $table->timestamps();
         });
